@@ -15,8 +15,15 @@ class Son : public Base<string>{
 //如果想灵活制定父类中T类型，子类也需要变类模板
 template<class T1, class T2>
 class Son2 : public Base<T2>{
+    Son2(){
+        cout << "T1 类型为" << typeid(T1).name() << endl;
+        cout << "T2 类型为" << typeid(T2).name() << endl;
+    }
     T1 m2;
 };
 void test02(){
-    Son2<char, int>son;
+    Son2<char, int>son();
+}
+int main(){
+    test02();
 }

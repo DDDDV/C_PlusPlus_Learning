@@ -23,17 +23,19 @@ void test01(){
     showPerson(p);
 }
 
+//2.参数模板化方法传入类模板对象
 template<class T1, class T2>
 void showPerson2(Person<T1, T2>&p){
     p.showPerson();
     cout << "type of T1 is " << typeid(T1).name() << endl; 
 }
-//2.参数模板化方法传入类模板对象
 void test02(){
     Person<string, int> p("wangzhe", 18);
     showPerson2(p);
     
 }
+
+//3.将整个类模板化
 template<class T>
 void showPerson3(T &t){
     t.showPerson();
@@ -42,7 +44,6 @@ void test03(){
     Person<string, int>p("xuliang", 20);
     showPerson3(p);
 }
-//3.将整个类模板化
 int main(){
     test01();
     test02();

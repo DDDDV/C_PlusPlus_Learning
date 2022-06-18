@@ -36,6 +36,28 @@ class MyArray{
             }
             return *this;
         }
+        void Push_Back(const T &var){
+            if(this->m_Capacity == this->m_size){
+                return;
+            }
+            this->pAddress[this->m_size] = var;
+            this->m_size++;
+        }
+        void Pop_Back(){
+            if(this->m_size == 0){
+                return;
+            }
+            this->m_size--;
+        }
+        T& operator[](int index){
+            return this->pAddress[index];
+        }
+        int getCapacity(){
+            return this->m_Capacity;
+        }
+        int getSize(){
+            return this->m_size;
+        }
         
         ~MyArray(){
             cout << "myarray析构" << endl;

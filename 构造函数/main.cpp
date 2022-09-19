@@ -30,7 +30,7 @@ class Teacher{
         cout << "Person default init" << endl;
     }
     Teacher(int age){
-        cout << "Teacher init wiht param" << endl;
+        cout << "Teacher init with param" << endl;
     }
     Teacher(const Teacher& t){
 

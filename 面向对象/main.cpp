@@ -11,7 +11,7 @@ class AbstractCalculator{
     public:
         int m_num1;
         int m_num2;
-        virtual int getResult() = 0;
+        virtual int getResult() = 0;//纯虚函数,子类必须重写
 };
 
 class AddCalculator : public AbstractCalculator{
@@ -20,6 +20,17 @@ class AddCalculator : public AbstractCalculator{
             return m_num1 + m_num2;
         }
 };
+
+class A{
+    public:
+        void func(){};
+};
+
+class B : A{
+    public:
+        void func(){};
+};
+
 void test01(){
     AbstractCalculator* add = new AddCalculator;
     add->m_num1 = 100;

@@ -31,7 +31,7 @@ myContainer generateArray(){
     cout << "array front is " << arr.front() << endl;
     cout << "array back is " << arr.back() << endl;
     cout << "array data is " << arr.data() << endl;
-
+ 
     return arr;
 }
 
@@ -41,7 +41,7 @@ int compareLongs(const void* a, const void* b){
 
 
 void binarySearchValue(myContainer arr, long value, void* compareFun){
-    
+
 }
 
 int main(){
